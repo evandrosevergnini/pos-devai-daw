@@ -5,6 +5,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 export default function ProductItem({item}) {
     return (
@@ -14,7 +15,7 @@ export default function ProductItem({item}) {
                     <Avatar alt="Remy Sharp" src={item.img} />
                 </ListItemAvatar>
                 <ListItemText
-                    primary={item.nome}
+                    primary={<Link to={`/product/${item.id}`}>{item.nome}</Link>}
                     secondary={
                         <React.Fragment>
                             <Typography
