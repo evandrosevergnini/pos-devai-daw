@@ -1,3 +1,5 @@
+@import './styles/Common.css';
+
 .App {
   text-align: center;
 }
@@ -5,6 +7,11 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  transition: transform 0.2s;
+}
+
+.App-logo:hover {
+  transform: scale(1.1);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,18 +21,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #1c2025;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  color: #f0f0f0;
 }
 
 @keyframes App-logo-spin {

@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { getPassword, getUser } from "../helpers/Utils";
-import "../styles/ProductDetails.css";
 
 export default function ProductDetails() {
   const { id } = useParams();

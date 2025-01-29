@@ -1,62 +1,53 @@
-/* .item must be first */
-.item {
-    align-items: center;
-    color: #FFF;
-    cursor: pointer;
-    display: flex;
-    font-size: 14px;
-    height: 40px;
-    justify-content: center;
-    width: 40px;
-  }
-  
-  .disabled-page {
-    color: #808e9b;
-  }
-  
-  .active {
-    border: solid 1px #FFF;
-    border-radius: 5px;
-    color: #FFF;
-  }
-  
-  .break-me {
-  }
-  
-  .next {
-    border-left: solid 1px #FFF;
-    font-size: 4px;
-    height: 60px;
-    position: absolute;
-    right: 0;
-    width: 150px;
-  }
-  
-  .pagination {
-    align-items: center;
-    background-color: #5d99c7;
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-    justify-content: center;
-    list-style-type: none;
-    position: relative;
-    width: 100%;
-  }
-  
-  .pagination-page {
-    font-weight: 700;
-  }
-  
-  .previous {
-    border-right: solid 1px #FFF;
-    font-size: 4px;
-    height: 60px;
-    left: 0;
-    position: absolute;
-    width: 150px;
-  }
+@import './Common.css';
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-  .items {
-    margin-bottom: 1rem;
-  }
+.home-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.items-container {
+  margin: 20px 0;
+}
+
+.pagination-container {
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination li a {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pagination li a:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination .active a {
+  background-color: #61dafb;
+  border-color: #61dafb;
+  color: white;
+}
