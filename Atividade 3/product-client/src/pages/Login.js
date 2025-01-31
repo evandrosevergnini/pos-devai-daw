@@ -1,9 +1,11 @@
 import '../styles/login.css';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { login } from '../helpers/Utils';
 
 export default function Login({onLogin}) {
+    const navigate = useNavigate();
 
     const [userName, setUserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
@@ -34,6 +36,7 @@ export default function Login({onLogin}) {
             if(response.data["sucesso"] == 1) {
                 login(userName, userPassword);
                 onLogin(true);
+                navigate('/');  // Redireciona para a home após login
             }
             else {
                 window.alert("Erro ao autenticar usuário: \n" + response.data["erro"]);

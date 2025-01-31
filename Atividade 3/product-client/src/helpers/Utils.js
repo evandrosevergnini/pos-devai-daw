@@ -1,18 +1,19 @@
-
 export function login(userName, password) {
-    localStorage.setItem('user', userName);
-    localStorage.setItem('password', password);
+    localStorage.setItem('username', userName.trim());
+    localStorage.setItem('password', password.trim());
 }
 
 export function logout() {
-    localStorage.setItem('user', null);
-    localStorage.setItem('password', null);
+    localStorage.removeItem('username');
+    localStorage.removeItem('password');
 }
 
 export function getUser() {
-    return localStorage.getItem('user');
+    const username = localStorage.getItem('username');
+    return username === 'null' ? null : username;
 }
 
 export function getPassword() {
-    return localStorage.getItem('password');
+    const password = localStorage.getItem('password');
+    return password === 'null' ? null : password;
 }

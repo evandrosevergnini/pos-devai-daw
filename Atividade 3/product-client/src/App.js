@@ -13,7 +13,7 @@ import NavBar from './components/NavBar';
  
 function App() {
 
-  const [isLogged, setIsLogged] = useState(getUser() != null ? true : false);
+  const [isLogged, setIsLogged] = useState(getUser() != null && getUser() !== 'null');
 
   function handleLogin(isAuth) {
     setIsLogged(isAuth);

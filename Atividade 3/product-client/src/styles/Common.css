@@ -1,36 +1,76 @@
+:root {
+  --primary-color: #2196f3;
+  --secondary-color: #1976d2;
+  --text-color: #333;
+  --background-color: #f5f5f5;
+  --error-color: #f44336;
+  --success-color: #4caf50;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    color: #61dafb;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  header {
-    background-color: #1c2025;
-    color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  button {
-    background-color: #61dafb;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1em;
-  }
-  
-  button:hover {
-    background-color: #21a1f1;
-  }
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #1c2025;
+  color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  background-color: #023582;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--secondary-color);
+}
