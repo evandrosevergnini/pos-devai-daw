@@ -36,7 +36,7 @@ export default function Login({onLogin}) {
             if(response.data["sucesso"] == 1) {
                 login(userName, userPassword);
                 onLogin(true);
-                navigate('/');  // Redireciona para a home após login
+                navigate('/home');  // Alterado de '/' para '/home'
             }
             else {
                 window.alert("Erro ao autenticar usuário: \n" + response.data["erro"]);
